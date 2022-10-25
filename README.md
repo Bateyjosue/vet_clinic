@@ -1,9 +1,16 @@
-# curriculum-databases-projects-template
+# Vet Clinic
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> It's a database which help to store the information about a Vet clinic to get all information collected daily within an clinic where by we track the animals, owner. The owner can book for a visit with one of the clinic employee. Build with PostgresSQL.
 
-
+# ScreenShot
+![](./screenshot/animal-neutered-true.png)
+![](./screenshot/animals-not-name-Gubumon.png)
+![](./screenshot/bornbtn2016-2019.png)
+![](./screenshot/findEndMon.png)
+![](./screenshot/name-AgumonorPikachu.png)
+![](./screenshot/neut-true-escap-less-3.png)
+![](./screenshot/weighmore10kg.png)
+![](./screenshot/weight_btn-10-17.png)
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
@@ -15,17 +22,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Josh Batey**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Bateyjosue](https://github.com/Bateyjosue)
+- Twitter: [@JosueBatey](https://twitter.com/josuebatey)
+- LinkedIn: [Josue (Josh) Batey](https://www.linkedin.com/in/josue-ishara/)
 
 ## 🤝 Contributing
 
