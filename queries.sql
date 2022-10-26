@@ -23,3 +23,12 @@ select * from animals where name not like 'Gabumon';
 
 -- Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg)
 select * from animals where weight_kg BETWEEN 10.4 and 17.3;
+
+BEGIN;
+  update animals set species = 'unspecified' where id > 0;
+ROLLBACK;
+
+BEGIN;
+  update animals set species = 'digimon' where name like '%mon';
+  update animals set species = 'pokemon' where  species is NULL;
+COMMIT;
