@@ -17,9 +17,12 @@ create table owners (
 
 create table species (
   id serial primary key,
-  name varchar(255),
+  name varchar(255)
 );
 
 -- Add column Spcies
 alter table animals
 add column species varchar(255);
+
+alter table animals
+drop species;
