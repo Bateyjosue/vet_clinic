@@ -30,5 +30,5 @@ drop species;
 alter table animals
 add column species_id int references species(id);
 
-
-
+alter table animals
+add column owner_id int references owners(id);
