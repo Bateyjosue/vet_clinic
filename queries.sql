@@ -32,3 +32,15 @@ BEGIN;
   update animals set species = 'digimon' where name like '%mon';
   update animals set species = 'pokemon' where  species is NULL;
 COMMIT;
+
+BEGIN;
+  delete from animals where id > 0;
+ROLLBACK;
+
+BEGIN;
+  delete from animals where date_of_birth > '2022-01-01';
+SAVEPOINT DOB;
+  update animals set weight_kg = (weight_kg * (-1)) where id > 0;
+ROLLBACK TO DOB;
+  update animals set weight_kg = (weight_kg * (-1)) where weight_kg < 0;
+COMMIT;
