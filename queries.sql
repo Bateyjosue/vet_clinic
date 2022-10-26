@@ -52,3 +52,6 @@ COMMIT;
 -- What is the average weight of animals?
   select avg(weight_kg) from animals;
 -- Who escapes the most, neutered or not neutered animals?
+select max(name) as name, escape_attempts from animals group by escape_attempts limit 1;
+-- What is the minimum and maximum weight of each type of animal?
+ 
