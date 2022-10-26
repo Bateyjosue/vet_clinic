@@ -26,3 +26,9 @@ add column species varchar(255);
 
 alter table animals
 drop species;
+
+alter table animals
+add column species_id int references species(id);
+
+
+
