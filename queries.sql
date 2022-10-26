@@ -44,3 +44,11 @@ SAVEPOINT DOB;
 ROLLBACK TO DOB;
   update animals set weight_kg = (weight_kg * (-1)) where weight_kg < 0;
 COMMIT;
+
+-- How many animals are there?
+  select count(*) from animals;
+-- How many animals have never tried to escape?
+-- What is the average weight of animals?
+-- Who escapes the most, neutered or not neutered animals?
+-- What is the minimum and maximum weight of each type of animal?
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
