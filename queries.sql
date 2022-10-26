@@ -48,7 +48,6 @@ COMMIT;
 -- How many animals are there?
   select count(*) from animals;
 -- How many animals have never tried to escape?
+  select count(*) from animals where escape_attempts = 0;
 -- What is the average weight of animals?
--- Who escapes the most, neutered or not neutered animals?
--- What is the minimum and maximum weight of each type of animal?
--- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+ 
