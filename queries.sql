@@ -56,3 +56,6 @@ select max(name) as name, escape_attempts from animals group by escape_attempts 
 -- What is the minimum and maximum weight of each type of animal?
   select min(weight_kg), max(weight_kg) from animals;
 -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+
+select avg(escape_attempts) from animals where extract(isoyear from  date_of_birth) between 1990 and 2000;
+
