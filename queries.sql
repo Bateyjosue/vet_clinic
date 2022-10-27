@@ -64,3 +64,5 @@ select avg(escape_attempts) from animals where extract(isoyear from  date_of_bir
 select * from animals as a join owners as o on a.owner_id = o.id where a.species_id = 1;
 
 select * from owners as o left join animals as a on o.id = a.owner_id; 
+
+select count(species_id), s.name from animals as a join species as s on a.species_id = s.id group by (a.species_id, s.name);
