@@ -61,7 +61,7 @@ select avg(escape_attempts) from animals where extract(isoyear from  date_of_bir
 
  select * from animals as a join owners as o on a.owner_id = o.id where o.full_name like 'Melody Pond';
 
-select * from animals as a join owners as o on a.owner_id = o.id where a.species_id = 1;
+select * from animals as a join owners as o on a.owner_id = o.id join species as s on a.species_id = s.id where s.name like 'Pokemon';
 
 select * from owners as o left join animals as a on o.id = a.owner_id; 
 
