@@ -59,3 +59,4 @@ select max(name) as name, escape_attempts from animals group by escape_attempts 
 
 select avg(escape_attempts) from animals where extract(isoyear from  date_of_birth) between 1990 and 2000;
 
+ select * from animals as a join owners as o on a.owner_id = o.id where o.full_name like 'Melody Pond';
