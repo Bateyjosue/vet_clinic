@@ -66,3 +66,5 @@ select * from animals as a join owners as o on a.owner_id = o.id where a.species
 select * from owners as o left join animals as a on o.id = a.owner_id; 
 
 select count(species_id), s.name from animals as a join species as s on a.species_id = s.id group by (a.species_id, s.name);
+
+select * from animals as a inner join owners as o on a.owner_id = o.id inner join species as s on a.species_id = s.id where s.name like 'Digimon' and o.full_name like 'Jennifer Orwell';
