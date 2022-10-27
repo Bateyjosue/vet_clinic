@@ -14,3 +14,16 @@ insert into species ('Pokemon'), ('Digimon');
 update animals set species_id = (select id from species where name like 'Digimon' limit 1) where name like '%mon';
 
 update animals set species_id = (select id from species where name like 'Pokemon' limit 1) where name not like '%mon';
+
+update animals set owner_id = (select id from owners where full_name like 'Sam Smith') where name like 'Agumon';
+update animals set owner_id = (select id from owners where full_name like 'Jennifer Orwell') 
+where name like 'Gabumon' or name like 'Pikachu';
+
+update animals set owner_id = (select id from owners where full_name like 'Bob') 
+where name like 'Devimon' or name like 'Plantmon';
+
+update animals set owner_id = (select id from owners where full_name like 'Melody Pond') 
+where name like 'Charmander' or name like 'Squirtle' or name like 'Blossom';
+
+update animals set owner_id = (select id from owners where full_name like 'Dean Winchester') 
+where name like 'Angemon' or name like 'Boarmon';
