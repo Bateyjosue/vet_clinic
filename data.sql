@@ -30,3 +30,10 @@ where name like 'Angemon' or name like 'Boarmon';
 
 -- Insert Data in Vets
 insert into vets (name, age, date_of_graduation) values ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17'), ('Stephanie Mendez', 64, '1981-04-04'), ('Jack Harkness', 38, '2008-06-08');
+
+-- Insert Data in Specialization
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Pokemon'), (select id from vets where name like 'William Tatcher'));
+
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Digimon'), (select id from vets where name like 'Stephanie Mendez')), ((select id from species where name like 'Pokemon'), (select id from vets where name like 'Stephanie Mendez'));
+
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Digimon'), (select id from vets where name like 'Jack Harkness'));
