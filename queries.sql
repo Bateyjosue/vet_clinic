@@ -71,4 +71,8 @@ select * from animals as a inner join owners as o on a.owner_id = o.id inner joi
 
  select * from animals as a inner join owners as o on a.owner_id = o.id  where o.full_name like 'Dean Winchester' and a.escape_attempts = 0;
 
- select count(a.owner_id) as count, o.full_name from animals as a inner join owners as o on a.owner_id = o.id group by (a.owner_id, o.full_name)order by count desc limit 1;
+select count(a.owner_id) as count, o.full_name from animals as a inner join owners as o on a.owner_id = o.id group by (a.owner_id, o.full_name)order by count desc limit 1;
+
+-- VIsit Join Table PR 
+
+vet_clinic=# select a.name  from visits as v join animals as a on v.animals_id = a.id join vets as vt on v.vets_id = vt.id where vt.name like 'William%' order by v.date_of_visit desc limit 1;
