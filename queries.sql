@@ -88,3 +88,7 @@ select count(a.name) as count, a.name from visits as v join animals as a on v.an
 select a.name from animals as a inner join visits as v on v.animals_id = a.id inner join vets as vt on v.vets_id = vt.id where vt.name like 'Maisy Smith' order by v.date_of_visit limit 1; 
 
  select (a.*), (vt.*), v.date_of_visit from animals as a inner join visits as v on v.animals_id = a.id inner join vets as vt on v.vets_id = vt.id  order by v.date_of_visit desc limit 1;
+
+ select * from visits as vt join animals as an on vt.animals_id = an.id join vets as v on vt.vets_id = v.id join specializations as s on s.vets_id=v.id;
+
+ select (count(*) - count(s.species_id)) as "Total Visit" from visits as vt join animals as an on vt.animals_id = an.id join vets as v on vt.vets_id = v.id left join specializations as s on s.vets_id=v.id left join species as sp on s.species_id = sp.id group by s.species_id limit 1;
