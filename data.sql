@@ -27,3 +27,39 @@ where name like 'Charmander' or name like 'Squirtle' or name like 'Blossom';
 
 update animals set owner_id = (select id from owners where full_name like 'Dean Winchester') 
 where name like 'Angemon' or name like 'Boarmon';
+
+-- Insert Data in Vets
+insert into vets (name, age, date_of_graduation) values ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17'), ('Stephanie Mendez', 64, '1981-04-04'), ('Jack Harkness', 38, '2008-06-08');
+
+-- Insert Data in Specialization
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Pokemon'), (select id from vets where name like 'William Tatcher'));
+
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Digimon'), (select id from vets where name like 'Stephanie Mendez')), ((select id from species where name like 'Pokemon'), (select id from vets where name like 'Stephanie Mendez'));
+
+insert into specializations (species_id, vets_id) values ((select id from species where name like 'Digimon'), (select id from vets where name like 'Jack Harkness'));
+
+-- Insert Data in Visits Table
+insert into Visits (animals_id, vets_id, date_of_visit) 
+values 
+((select id from animals where name like 'Agumon'), (select id from vets where name like 'William Tatcher'),'2020-05-24'), 
+((select id from animals where name like 'Agumon'), (select id from vets where name like 'Stephanie Mendez'), '2020-06-22'), 
+((select id from animals where name like 'Gabumon'), (select id from vets where name like 'Jack Harkness'), '2021-02-02'), 
+((select id from animals where name like 'Pikachu'), (select id from vets where name like 'Maisy Smith'), '2020-01-05'),
+((select id from animals where name like 'Pikachu'), (select id from vets where name like 'Maisy Smith'), '2020-03-08'),
+((select id from animals where name like 'Pikachu'), (select id from vets where name like 'Maisy Smith'), '2020-05-14'),
+((select id from animals where name like 'Devimon'), (select id from vets where name like 'Stephanie Mendez'), '2021-05-04'),
+((select id from animals where name like 'Charmander'), (select id from vets where name like 'Jack Harkness'), '2021-02-24'),
+((select id from animals where name like 'Plantmon'), (select id from vets where name like 'Maisy Smith'), '2019-12-21'),
+((select id from animals where name like 'Plantmon'), (select id from vets where name like 'William Tatcher'), '2020-08-10'),
+((select id from animals where name like 'Plantmon'), (select id from vets where name like 'Maisy Smith'), '2021-04-07'),
+((select id from animals where name like 'Squirtle'), (select id from vets where name like 'Stephanie Mendez'), '2019-09-29'),
+((select id from animals where name like 'Angemon'), (select id from vets where name like 'Jack Harkness'), '2020-10-03'),
+((select id from animals where name like 'Angemon'), (select id from vets where name like 'Jack Harkness'), '2020-11-04'),
+((select id from animals where name like 'Boarmon'), (select id from vets where name like 'Maisy Smith'), '2019-01-24'),
+((select id from animals where name like 'Boarmon'), (select id from vets where name like 'Maisy Smith'), '2019-05-15'),
+((select id from animals where name like 'Boarmon'), (select id from vets where name like 'Maisy Smith'), '2020-02-27'),
+((select id from animals where name like 'Boarmon'), (select id from vets where name like 'Maisy Smith'), '2020-08-03'),
+((select id from animals where name like 'Blossom'), (select id from vets where name like 'Stephanie Mendez'), '2020-05-24'),
+((select id from animals where name like 'Blossom'), (select id from vets where name like 'William Tatcher'), '2021-01-11');
+
+
