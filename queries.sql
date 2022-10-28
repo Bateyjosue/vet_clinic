@@ -76,3 +76,10 @@ select count(a.owner_id) as count, o.full_name from animals as a inner join owne
 -- VIsit Join Table PR 
 
 vet_clinic=# select a.name  from visits as v join animals as a on v.animals_id = a.id join vets as vt on v.vets_id = vt.id where vt.name like 'William%' order by v.date_of_visit desc limit 1;
+
+select count(a.name)  from visits as v join animals as a on v.animals_id = a.id join vets as vt on v.vets_id = vt.id where vt.name like 'Stephanie Mendez';
+
+select v.name as "Vet Name", s.name as "Speciality" from specializations as sp right join vets as v on sp.vets_id = v.id left join species as s on sp.species_id =s.id;
+
+select a.name, v.date_of_visit from animals as a inner join visits as v on v.animals_id = a.id inner join vets as vt on v.vets_id = vt.id where vt.name like 'Stephanie Mendez' and (v.date_of_visit >= '2020-04-01' and v.date_of_visit <= '2020-08-30');
+  name   | date_of_visit 
