@@ -44,3 +44,5 @@ create table visits (
   vets_id int references vets(id),
   date_of_visit date
 );
+
+alter table owners add column email varchar(120);
