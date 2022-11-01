@@ -3,14 +3,8 @@
 > It's a database which help to store the information about a Vet clinic to get all information collected daily within an clinic where by we track the animals, owner. The owner can book for a visit with one of the clinic employee. Build with PostgresSQL.
 
 # ScreenShot
-![](./screenshot/animal-neutered-true.png)
-![](./screenshot/animals-not-name-Gubumon.png)
-![](./screenshot/bornbtn2016-2019.png)
-![](./screenshot/findEndMon.png)
-![](./screenshot/name-AgumonorPikachu.png)
-![](./screenshot/neut-true-escap-less-3.png)
-![](./screenshot/weighmore10kg.png)
-![](./screenshot/weight_btn-10-17.png)
+![](./screenshot/ERModel.png)
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
